@@ -9,8 +9,8 @@
 
   - [Introduction](#Introduction)
   - [Documentation](#Documentation)
-  - [Examples](#Examples)
   - [Tutorial](#Tutorial)
+  - [Examples](#Examples)
   - [Brief implementation details](#Brief-implementation-details)
   - [Installation](#Installation)
     * [Dependencies](#Dependencies)
@@ -35,8 +35,17 @@ For more details about the model and results, we refer to the paper:
 
 Download pdf [here](https://prashjha.github.io/publication/jha-2020-peridem/jha-2020-peridem.pdf).
 
+We have created channels on various platforms: 
+- [PeriDEM on Gitter](https://gitter.im/PeriDEM/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+  * Gitter is absolutely open and easy to join.
+- [PeriDEM on slack](peridem.slack.com)
+  * Send me an email if interested in joining the workspace.
+
 ## Documentation
 Doxygen generated documentation of the code can be found [here](https://prashjha.github.io/PeriDEM/). Documentation will be improved in due time.
+
+## Tutorial
+We explain the setting-up of simulations in further details in [tutorial](tutorial/README.md). We consider `two-particle` test setup with non-circular particles and `compressive-test` setups to discuss the various aspects of simulations.
 
 ## Examples
 We next highlight some key examples. For more details, look at the `create_input_file()` within `problem_setup.py` or `input_0.yaml` in [examples](https://github.com/prashjha/PeriDEM/blob/main/examples/PeriDEM).
@@ -80,10 +89,7 @@ Setup for this test consists of 502 circular and hexagonal-shaped particles of v
 
 | <img src="https://github.com/prashjha/PeriDEM/blob/main/assets/compressive_test.gif" width="600"> | 
 | :---: | 
-| Compressive test simulation |
-
-## Tutorial
-We explain the setting-up of simulations in further details in [tutorial](tutorial/README.md). We consider `two-particle` test setup with non-circular particles and `compressive-test` setups to discuss the various aspects of simulations. 
+| Compressive test simulation | 
 
 ## Brief implementation details
 The main implementation of the model is carried out in the model directory [dem](https://github.com/prashjha/PeriDEM/blob/main/src/model/dem). The model is implemented in class `DEMModel`, see [demModel.cpp](https://github.com/prashjha/PeriDEM/blob/main/src/model/dem/demModel.cpp). Function `DEMModel::run()` performs the simulation. We next look at some key methods in `DEMModel` in more details:
@@ -335,7 +341,7 @@ PeriDEM currently depends on four major libraries: Boost, VTK, HPX
 ### Ask for help
 Because this library depends on complex libraries, it may get a little challenging to build it. If you carefully read the instructions, you should be able to compile PeriDEM in both ubuntu 18.04 and 20.04! For mac, as mentioned before, building this code is challenging, and we have not been successful yet. 
 
-Still, if you are stuck, feel free to reach out or open an issue. For more open discussion of issues and ideas, we have created a [channel](https://gitter.im/PeriDEM/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link) on Gitter. If you like some help, want to contribute, extend the code, or discuss new ideas, please reach out.
+Still, if you are stuck, feel free to reach out or open an issue. For more open discussion of issues and ideas, contact via [PeriDEM on Gitter](https://gitter.im/PeriDEM/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link) or [PeriDEM on slack](peridem.slack.com) (for slack, send me an email to join). If you like some help, want to contribute, extend the code, or discuss new ideas, please reach out.
 
 ## Running simulations
 Assuming that the input file is `input.yaml` and all other files such as `.msh` file for particle/wall and particle locations file are created and their filenames with paths are correctly provided in `input.yaml`, we will run the problem (using 4 threads) 
@@ -409,7 +415,7 @@ If this library was useful in your work, we recommend citing the following artic
 
 You can also cite the PeriDEM using zenodo doi:
 
-> https://doi.org/10.5281/zenodo.4724168
+> http://doi.org/10.5281/zenodo.4733259
 
 ## Developers
   - [Prashant K. Jha](https://prashjha.github.io/) (pjha.sci@gmail.com, pjha@utexas.edu)
